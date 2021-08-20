@@ -1,0 +1,23 @@
+{
+	"name": "skech",
+	"version": "1.0.1",
+	"main": "index.js",
+	"repository": {
+		"url": "git@github.com:Project-Impact-World/skech.git",
+		"type": "git"
+	},
+	"author": "cameron <camrbo@gmail.com>",
+	"license": "MIT",
+	"keywords": [
+		"components",
+		"design",
+		"styles"
+	],
+	"bugs": "git@github.com:Project-Impact-World/skech.git/issues",
+	"files": [
+		"index.js"
+	],
+	"bin": {
+		"skech-cli": "bin/cli.js"
+	}
+}
