@@ -1,6 +1,6 @@
 {
 	"name": "skech",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"main": "index.js",
 	"repository": {
 		"url": "git@github.com:Project-Impact-World/skech.git",
@@ -12,12 +12,5 @@
 		"components",
 		"design",
 		"styles"
-	],
-	"bugs": "git@github.com:Project-Impact-World/skech.git/issues",
-	"files": [
-		"index.js"
-	],
-	"bin": {
-		"skech-cli": "bin/cli.js"
-	}
+	]
 }
