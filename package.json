@@ -6,11 +6,17 @@
 		"url": "git@github.com:Project-Impact-World/skech.git",
 		"type": "git"
 	},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
 	"author": "cameron <camrbo@gmail.com>",
 	"license": "MIT",
-	"keywords": [
-		"components",
-		"design",
-		"styles"
-	]
+	"devDependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+  "peerDependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	}
 }
