@@ -1,3 +1,9 @@
 {
-	"cSpell.ignoreWords": ["cli", "clsx", "skech"]
+	"cSpell.ignoreWords": [
+		"cli",
+		"clsx",
+		"navlink",
+		"navlinks",
+		"skech"
+	]
 }
