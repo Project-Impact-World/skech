@@ -1,4 +1,5 @@
 import NavLink from './navlink';
+import React from 'react';
 
 const NavBar = ({ links }) => {
 	let navlinks;
