@@ -42,5 +42,8 @@
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2"
 	},
-	"dependencies": {}
+	"dependencies": {},
+	"resolutions": {
+		"styled-components": "^5"
+	}
 }

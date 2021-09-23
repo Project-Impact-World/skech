@@ -1,46 +1,66 @@
-import NavLink from './navlink';
+import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
+import theme from '../../theme/theme';
 
-const NavBar = ({ links }) => {
-	let navlinks;
-	!links
-		? (navlinks = [
-				{ href: '/home', name: 'Home' },
-				{ href: '/about', name: 'About' },
-				{ href: '/about', name: 'Blogs' },
-				{ href: '/about', name: 'FAQs' },
-		  ])
-		: (navlinks = links);
+export const NavItem = ({ color = 'white', children }) => {
+	const Item = styled.li`
+		margin: 0 5px 0 5px;
+		list-style: none;
+		color: ${color};
+	`;
+
+	return <Item>{children}</Item>;
+};
+
+export const NavMap = ({ children }) => {
+	const NavMap = styled.ul`
+		display: flex;
+		background-color: ${(props) =>
+			props.theme.color.accent};
+		cursor: pointer;
+		align-items: end;
+		height: 100%;
+		color: white;
+		font-family: ${(props) => props.theme.fonts[1]};
+		@media screen and (max-width: 600px) {
+			visibility: collapse;
+		}
+	`;
+	return (
+		<ThemeProvider theme={theme}>
+			<NavMap>{children}</NavMap>
+		</ThemeProvider>
+	);
+};
+
+export const NavMedia = () => {};
+
+const NavBar = ({ color, children, flex }) => {
+	const NavBar = styled.div`
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		min-height: 70px;
+		display: flex;
+		flex-direction: ${flex};
+		align-items: center;
+		padding: 0px 100px 0px 100px;
+		background-color: ${color};
+		font-family: ${(props) => props.theme.fonts[1]};
+		color: white;
+		@media screen and (max-width: 600px) {
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: auto;
+		}
+	`;
 
 	return (
-		<nav
-			style={{
-				display: 'flex',
-				justifyContent: 'end',
-				backgroundColor: '#039dfc',
-				height: '100px',
-				width: '100vw',
-				position: 'absolute',
-				top: '0px',
-				right: '0px',
-			}}>
-			<div
-				style={{
-					height: '100%',
-					width: `${navlinks.length * 10}vw`,
-					display: 'flex',
-					flexFlow: 'row wrap',
-					alignItems: 'center',
-					justifyContent: 'space-evenly',
-				}}>
-				{navlinks.map((link, idx) => {
-					return (
-						<div key={idx}>
-							<NavLink href={link.href} name={link.name} />
-						</div>
-					);
-				})}
-			</div>
-		</nav>
+		<ThemeProvider theme={theme}>
+			<NavBar>{children}</NavBar>;
+		</ThemeProvider>
 	);
 };
 
